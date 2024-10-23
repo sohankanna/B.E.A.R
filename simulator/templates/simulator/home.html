@@ -1,0 +1,146 @@
+
+{% load static %}  <!-- Add this line at the top -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Engineering Simulator</title>
+    <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'images/vite.svg' %}" alt="Logo" class="nav-logo">
+                <span>SecureTraining</span>
+            </div>
+            <div class="nav-links">
+                <a  href="{% url 'home' %}" class="active">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="{% url 'login' %}" class="btn btn-outline">Sign In</a>
+                <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
+            </div>
+            <button class="mobile-menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Social Engineering Simulator</h1>
+                <p>Test and Train Your Employees Against Phishing Attacks</p>
+                <div class="hero-buttons">
+                    <a href="/about.html" class="btn btn-primary">Learn More</a>
+                    <a href="/signup.html" class="btn btn-outline">Start Free Trial</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Companies Protected</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Employees Trained</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Simulated Phishing</h3>
+                    <p>Create realistic phishing scenarios to test employee awareness</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3>Vishing Training</h3>
+                    <p>Voice phishing simulations for comprehensive security training</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Employee Metrics</h3>
+                    <p>Detailed analytics and reporting on training effectiveness</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up</h3>
+                    <p>Create an account for your organization</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Configure</h3>
+                    <p>Set up your training scenarios and campaigns</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Deploy</h3>
+                    <p>Launch your security awareness program</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Monitor</h3>
+                    <p>Track progress and generate reports</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"SecureTraining has transformed our security awareness program. Our employees are now much better prepared."</p>
+                    <div class="testimonial-author">
+                        <strong>John Smith</strong>
+                        <span>Security Director, Tech Corp</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The simulation scenarios are incredibly realistic. Highly recommended for any organization."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>CTO, DataSafe Inc</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'contact' %}">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@securetraining.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SecureTraining. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
