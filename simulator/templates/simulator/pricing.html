@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - SecureTraining</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'images/vite.svg' %}" alt="Logo" class="nav-logo">
+                <span>SecureTraining</span>
+            </div>
+            <div class="nav-links">
+                <a  href="{% url 'home' %}" class="active">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'pricing' %}">Pricing</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <a href="{% url 'login' %}" class="btn btn-outline">Sign In</a>
+                <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
+            </div>
+            <button class="mobile-menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pricing-hero">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the plan that's right for your organization</p>
+        </section>
+
+        <section class="pricing-section">
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Annual <span class="discount">Save 20%</span></span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="amount monthly">$299</span>
+                            <span class="amount annual">$239</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for small teams</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 100 employees</li>
+                        <li>Basic phishing templates</li>
+                        <li>Email support</li>
+                        <li>Basic reporting</li>
+                        <li>2 training modules</li>
+                    </ul>
+                    <a href="/signup.html" class="btn btn-outline">Get Started</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount monthly">$599</span>
+                            <span class="amount annual">$479</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For growing organizations</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 500 employees</li>
+                        <li>Advanced phishing templates</li>
+                        <li>Priority support</li>
+                        <li>Advanced analytics</li>
+                        <li>10 training modules</li>
+                        <li>Vishing simulations</li>
+                        <li>Custom landing pages</li>
+                    </ul>
+                    <a href="/signup.html" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="custom-price">Custom</span>
+                        </div>
+                        <p>For large organizations</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Unlimited employees</li>
+                        <li>Custom templates</li>
+                        <li>24/7 dedicated support</li>
+                        <li>Custom reporting</li>
+                        <li>Unlimited modules</li>
+                        <li>API access</li>
+                        <li>SSO integration</li>
+                        <li>Custom training content</li>
+                    </ul>
+                    <a href="/contact.html" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Can I change plans later?</h3>
+                    <p>Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards, PayPal, and bank transfers for enterprise customers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a free trial?</h3>
+                    <p>Yes, all plans come with a 14-day free trial. No credit card required.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's included in custom training?</h3>
+                    <p>Custom training includes branded content, industry-specific scenarios, and tailored learning paths.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'pricing' %}">Pricing</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@securetraining.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SecureTraining. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Successful - SecureTraining</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'images/vite.svg' %}" alt="Logo" class="nav-logo">
+                <span>SecureTraining</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="success-section">
+            <div class="success-container">
+                <div class="success-icon">✓</div>
+                <h1>Welcome to SecureTraining!</h1>
+                <p>Your account has been successfully created.</p>
+                <div class="next-steps">
+                    <h2>Next Steps:</h2>
+                    <ol>
+                        <li>Check your email for verification link</li>
+                        <li>Complete your organization profile</li>
+                        <li>Start your first training campaign</li>
+                    </ol>
+                </div>
+                <div class="success-actions">
+                    <a href="{% url 'login' %}"  class="btn btn-primary">Go to Dashboard</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SecureTraining. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

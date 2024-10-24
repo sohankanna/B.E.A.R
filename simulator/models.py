@@ -1,11 +1,10 @@
 from django.db import models
 
-class Employee(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    is_vulnerable = models.BooleanField(default=False)
+class Organization(models.Model):
+    org_name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    phone = models.CharField(max_length=15)
+    password = models.CharField(max_length=255)  # You can later hash this if needed
 
-class EmailInteraction(models.Model):
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    clicked_link = models.BooleanField(default=False)
-    response_time = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.org_name
